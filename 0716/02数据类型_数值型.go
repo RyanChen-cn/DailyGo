@@ -40,4 +40,9 @@ func main() {
 	var num05 complex64 = 3.7e-20
 	var num06 complex128 = -2e-100
 	fmt.Println(num05,num06)
+	//4.布尔型
+	var boolvar bool = true
+	fmt.Println(boolvar)
+	//go语言的类型审查非常严格 bool不能跟0/1比较
+	//fmt.Println(boolvar==1)
 }
