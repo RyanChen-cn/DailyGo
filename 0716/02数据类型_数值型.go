@@ -7,12 +7,12 @@ func main() {
 	//int(看操作系统位数) int8 int16 int 32 int 64
 	//uint(看操作系统位数) uint8 uint16 uint32 uint64
 	//进制表示
-		//2进制 0b 0B开头
-		//8进制 0o 0O开头
-		//16进制 0x 0X开头
+	//2进制 0b 0B开头
+	//8进制 0o 0O开头
+	//16进制 0x 0X开头
 	var num01 int = 0b1100
 	//print(num01)
-	var num02 int = 0XC
+	var num02 int = 0xC
 	//println(num02)
 	//支持格式化输出
 	fmt.Printf("2进制数 %b 表示的是: %d \n", num01, num01)
@@ -34,12 +34,12 @@ func main() {
 	//float64第一位符号位 11位指数位 52位尾数
 	var num03 float32 = 3.7e10
 	fmt.Println(num03)
-	var num04 float32 = 3.7E-5
+	var num04 float32 = 3.7e-5
 	fmt.Println(num04)
 	//3.复数
 	var num05 complex64 = 3.7e-20
 	var num06 complex128 = -2e-100
-	fmt.Println(num05,num06)
+	fmt.Println(num05, num06)
 	//4.布尔型
 	var boolvar bool = true
 	fmt.Println(boolvar)

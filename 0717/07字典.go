@@ -13,12 +13,12 @@ func main() {
 	//2.其他初始化方法
 	var scores map[string]int = map[string]int{"english": 80, "chinese": 85}
 	scores2 := map[string]int{"english": 80, "chinese": 85}
-	fmt.Println(scores,scores2)
+	fmt.Println(scores, scores2)
 
 	//3.查找操作
 	//3.1 判断是否存在，has会返回一个布尔值
-	var hobby,has = map_var["xiaoming1"]
-	println(hobby,has)
+	var hobby, has = map_var["xiaoming1"]
+	println(hobby, has)
 	//3.2 不判断是否存在  如果不存在会返回零值
 	var hobby2 = map_var["xiaoming1"]
 	println(hobby2)
