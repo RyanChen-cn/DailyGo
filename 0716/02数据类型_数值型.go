@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	//1.整形
-	//int(看操作系统位数) int8 int16 int 32 int 64
+	//int(看操作系统位数) int8 int16 int32 int64
 	//uint(看操作系统位数) uint8 uint16 uint32 uint64
 	//进制表示
 	//2进制 0b 0B开头

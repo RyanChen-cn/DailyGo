@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	//1.for当while用
@@ -40,5 +42,14 @@ func main() {
 		fmt.Println(key)
 	}
 	//out 0 1
-
+	
+	//多层continue break
+	f1:for i := 1; i<5; i++{
+		for j := 0; j < i; j++ {
+			if (j==1){
+				continue f1
+			}
+			fmt.Println(i,j)
+		}
+	}
 }

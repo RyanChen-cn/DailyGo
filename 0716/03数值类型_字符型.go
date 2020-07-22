@@ -18,7 +18,7 @@ func main() {
 	//验证
 	fmt.Println(unsafe.Sizeof(a), unsafe.Sizeof(c))
 	//3.字符串
-	//go字符串不可改变,使用utf-8编码，英文占一个字节，中文占三个字节，因为go只保留了一个内存的指针
+	//go字符串不可改变,Go的字符串由单个字节连接起来，使用utf-8编码，英文占一个字节，中文占三个字节，因为go只保留了一个内存的指针
 	//3.1 直接建
 	var str01 string = "Daily Go 每日"
 	fmt.Println(str01)
@@ -26,4 +26,11 @@ func main() {
 	var str02 = [5]byte{104, 101, 108, 108, 111}
 	fmt.Printf("%s", str02)
 	//``也可以作为字符串括起来的
+	//反引号，以原生形式输出，包括特殊字符，防止注入攻击
+	string2 := `
+		啦啦啦
+		go
+		hello
+		`
+	fmt.Println(string2)
 }
