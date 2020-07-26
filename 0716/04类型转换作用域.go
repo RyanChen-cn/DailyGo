@@ -39,6 +39,18 @@ func main() {
 	r2,err2:=strconv.ParseInt(r1,2,8)
 	fmt.Println(r2, err2)
 
+	/*
+	字符串与布尔类型转换
+	string->bool
+		result,err := strconv.ParseBool("true")
+		true:"1","t","T","true","TRUE","True"
+		false:"0","f","F","false","FALSE","False"
+		如果不是上面的几个关键字，则会返回false，同时err也会出现错误信息
+	bool->string
+		bo = strconv.FormatBool(false)
+
+	*/
+
 
 	/*
 	在函数外面声明的是全局变量

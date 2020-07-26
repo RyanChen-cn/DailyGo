@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	//1.光声明map还是不能用，需要用make初始化
+	//1.光声明map还是不能用，需要用make初始化 可以初始化指定大小
 	var map_var map[string]string
 	map_var = make(map[string]string)
-	map_var2 := make(map[string]string)
+	map_var2 := make(map[string]string,10)
 	map_var["xiaoming"] = "爱读书"
 	map_var2["laoming"] = "爱吃肉"
 

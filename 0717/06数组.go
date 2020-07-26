@@ -8,37 +8,45 @@ func main() {
 	var array [10]int
 	array[0] = 1
 	fmt.Println(array)
-	//指定了array[4]=1其他的是初始化的值
+	//2.指定了array[4]=1其他的是初始化的值
 	array2 := [...]int{4: 1}
 	fmt.Println(array2)
-	//2.大小类型推导
-	var balance = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
-	//切片
-	var balance2 = []float32{1000.0, 2.0, 3.4, 7.0, 50.0}
+	//3.大小推导
 	var balance3 = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
-	fmt.Println(balance, balance2, balance3[4])
-	//3.不定长,切片 也有不同点，=切片本身是引用类型，它更像是 Python 中的 list ，我们可以对它 append 进行元素的添加。
-	var balance4 []int
-	balance4 = append(balance4, 10)
-	fmt.Println(balance4, cap(balance4))
+	fmt.Println(balance3)
 	//4.多维数组
 	var threedim [5][10][4]int
 	fmt.Println(threedim)
-	//5.切片
-	var slice = balance[0:3]
-	fmt.Println(slice)
-	//make( []Type, size, cap )
-	a := make([]int, 2)
-	b := make([]int, 2, 10)
-	fmt.Println(a, b)
-	fmt.Println(len(a), len(b))
-	fmt.Println(cap(a), cap(b))
 
-	var numbers4 = [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-	myslice := numbers4[0:2]
-	fmt.Printf("myslice为 %d, 其长度为: %d cap %d\n", myslice, len(myslice), cap(myslice))
-	//因为切片是对数组的引用，所以会改变原来的值
-	myslice[0] = 99
-	fmt.Println(myslice[0], numbers4[0])
+	/*
+	声明指针类型的数组不会开辟初始化数组的只，numbers = nil
+	var numbers *[3]int
+	//初始化
+	numbers = new([3]int)
+	 */
 
+	/*
+	数组的内存管理
+		1.数组的内存是连续的
+		2.数组的内存地址实际上就是数组第一个元素的内存地址
+		3.int类型是直接存在列表中的，占多少自己看是int多少
+		4.字符串列表不存储字符串本身，存储字符串指针还有字符 串的len（字节长度） 这个指针和长度要用16个字节来存储
+			注意：字符串在go中存储的方式就是用一个指针还有一个长度来进行存储
+
+	 */
+
+	/*
+	可变和拷贝
+	可变：数组的元素可以被更改，数组的长度、类型不可变
+	拷贝:变量赋值时会重新拷贝一份，修改name2不会影响到name1
+		name1 := [2]string{"daily","go"}
+		name2 := name1
+
+	 */
+	/*
+	获取数组长度
+		len(array)
+	切片
+		data := array[0:2]
+	 */
 }
